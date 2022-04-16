@@ -6,6 +6,7 @@ import java.util.Objects;
 
 public class Customer {
     private long id;
+    private static long lastId=0;
     private String firstName;
     private String lastName;
     private String email;
@@ -13,12 +14,20 @@ public class Customer {
     private String address;
     private CustomerType type;
 
-    public void show()
-    {
-        System.out.println("first Name = "+firstName);
-        System.out.println("last Name = "+lastName);
-        //...
+    public Customer() {
+        this.id=++lastId;
     }
+
+    public Customer(String firstName, String lastName, String email, String telephoneNumber, String address, CustomerType type) {
+        this.id=++lastId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.telephoneNumber = telephoneNumber;
+        this.address = address;
+        this.type = type;
+    }
+
 
     public long getId() {
         return id;
@@ -102,3 +111,4 @@ public class Customer {
         return Objects.hash(firstName, lastName, email);
     }
 }
+
