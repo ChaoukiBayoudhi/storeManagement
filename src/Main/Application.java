@@ -5,7 +5,9 @@ import customerMgt.Customer;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
+import java.util.Scanner;
 
 public class Application {
 
@@ -34,11 +36,17 @@ public class Application {
         System.out.println(customers);
 */
         //test of lombok library use
-        Product p1=new Product();
-        p1.setLabel("Product 1");
-        p1.setExpiredDate(LocalDate.of(2022,11,12));
-        p1.setFabricationDate(LocalDate.of(2021,11,12));
-        System.out.println(p1);
+//        Product p1=new Product();
+//        p1.setLabel("Product 1");
+//        p1.setExpiredDate(LocalDate.of(2022,11,12));
+//        p1.setFabricationDate(LocalDate.of(2021,11,12));
+//        System.out.println(p1);
+//test of trim method
+        String ch="     abc efh     ";
+        System.out.println("size before trim = "+ch.length());
+        ch=ch.trim();
+        System.out.println("size after trim = "+ch.length());
+
 
     }
 }
