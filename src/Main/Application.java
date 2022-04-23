@@ -1,5 +1,6 @@
 package Main;
 
+import DatabaseConnection.DbConnection;
 import Exceptions.ProviderExistException;
 import ProductMgt.Product;
 import ProductMgt.Products;
@@ -68,21 +69,24 @@ public class Application {
 //        products.addProduct(p1,providers);
 
         //test of exception propagation case
-        Providers providers=new Providers();
+//        Providers providers=new Providers();
+//
+//        Provider pr1=new Provider();
+//        pr1.setName("Mercedes");
+//        pr1.setEmail("mercedes.benz@ben.de");
+//        try{
+//            providers.add(pr1);
+//            Provider pr2=new Provider();
+//            pr2.setName("BMW");
+//            pr2.setEmail("bmw.xyz@bmw.de");
+//            providers.add(pr2);
+//        }
+//        catch(ProviderExistException e){
+//            System.out.println(e.getMessage());
+//        }
+//        System.out.println("End of the application.");
 
-        Provider pr1=new Provider();
-        pr1.setName("Mercedes");
-        pr1.setEmail("mercedes.benz@ben.de");
-        try{
-            providers.add(pr1);
-            Provider pr2=new Provider();
-            pr2.setName("BMW");
-            pr2.setEmail("bmw.xyz@bmw.de");
-            providers.add(pr2);
-        }
-        catch(ProviderExistException e){
-            System.out.println(e.getMessage());
-        }
-        System.out.println("End of the application.");
+        //test of the connection to storedb Database
+        DbConnection.getDbConnection();
     }
 }
