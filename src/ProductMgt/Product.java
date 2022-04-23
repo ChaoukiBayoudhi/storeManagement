@@ -1,5 +1,6 @@
 package ProductMgt;
 
+import ProviderMgt.Provider;
 import lombok.*;
 
 import java.math.BigDecimal;
@@ -26,6 +27,7 @@ public class Product {
     private String description;
     @ToString.Exclude
     private byte[] photo;
+    private Provider productProvider;
     public Product()
     {
         id=++lastId;
